@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Settings.js Generator - RafkaVL</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #020617; color: #cbd5e1; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(51, 65, 85, 0.5); backdrop-filter: blur(10px); }
+        .mandatory { border-left: 5px solid #ef4444 !important; }
+        .optional { border-left: 5px solid #3b82f6 !important; }
+        .input-style { background: #0f172a !important; border: 1px solid #1e293b !important; color: white !important; width: 100%; padding: 8px; border-radius: 8px; outline: none; font-size: 0.8rem; }
+        .input-style:focus { border-color: #3b82f6 !important; }
+        label { font-size: 0.65rem; font-weight: 800; color: #94a3b8; display: block; margin-bottom: 3px; text-transform: uppercase; }
+        .loader { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.95); z-index: 100; align-items: center; justify-content: center; flex-direction: column; }
+    </style>
+</head>
+<body class="p-4 md:p-10">
+
+    <div id="loader" class="loader">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-blue-500"></div>
+        <p class="mt-4 font-bold text-white tracking-widest">UPLOADING MEDIA TO CDN...</p>
+    </div>
+
+    <div class="max-w-7xl mx-auto">
+        <header class="mb-10 text-center md:text-left border-b border-slate-800 pb-6">
+            <h1 class="text-3xl font-black text-white italic">SETTINGS.<span class="text-blue-500">JS</span> BUILDER</h1>
+            <p class="text-sm text-slate-500">Full Configurator sesuai petunjuk ❗❗ dan ❕❕</p>
+        </header>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            
+            <div class="space-y-6">
+                <div class="glass mandatory p-6 rounded-2xl">
+                    <h2 class="text-red-500 font-black mb-4 flex items-center gap-2"><i class="fas fa-exclamation-circle"></i> ❗❗ IDENTITAS & OWNER</h2>
+                    <div class="space-y-4">
+                        <div><label>Owner Numbers (Koma)</label><textarea id="owner" class="input-style h-16">6285178399532, 628812946724, 6289680403022</textarea></div>
+                        <div><label>Nama Bot</label><input type="text" id="namebot" value="RafkaVL Botzz" class="input-style"></div>
+                        <div><label>Title Saluran</label><input type="text" id="title" value="Rafkasatriya61" class="input-style"></div>
+                        <div><label>Link Saluran (sourceurl)</label><input type="text" id="sourceurl" value="https://whatsapp.com/channel/..." class="input-style"></div>
+                        <div><label>Rowner (Koma)</label><input type="text" id="rowner" value="6285178399532, 6281549236243" class="input-style"></div>
+                        <div><label>Nama Owner</label><input type="text" id="nameowner" value="RafkaSatriya" class="input-style"></div>
+                        <div><label>Nomor Own (Auto Backup)</label><input type="text" id="nomorown" value="6285178399532" class="input-style"></div>
+                        <div><label>LID Owner (Getlid)</label><input type="text" id="lid" value="200489811583048" class="input-style"></div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div><label>Packname</label><input type="text" id="packname" value="RafkaVL Botzz" class="input-style"></div>
+                            <div><label>Author</label><input type="text" id="author" value="Made By RafkaSatriya61" class="input-style"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass mandatory p-6 rounded-2xl">
+                    <h2 class="text-red-500 font-black mb-4 flex items-center gap-2"><i class="fas fa-key"></i> ❗❗ API & KEYS</h2>
+                    <div class="space-y-4">
+                        <div><label>Jagpro Key</label><input type="text" id="jagprokey" value="ceweakuafnii" class="input-style"></div>
+                        <div><label>Jagpro Plus Key</label><input type="text" id="jagproplus" value="ceweguaafnii" class="input-style"></div>
+                        <div><label>Github Token</label><input type="password" id="github" value="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" class="input-style"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="glass mandatory p-6 rounded-2xl">
+                    <h2 class="text-red-500 font-black mb-4 flex items-center gap-2"><i class="fas fa-store"></i> ❗❗ STORE & PAY</h2>
+                    <div class="space-y-4">
+                        <div><label>Nama Store</label><input type="text" id="namestore" value="RafkaVL Store" class="input-style"></div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <div><label>Dana</label><input type="text" id="dana" value="082252509320" class="input-style"></div>
+                            <div><label>Gopay</label><input type="text" id="gopay" value="082252509320" class="input-style"></div>
+                            <div><label>Ovo</label><input type="text" id="ovo" value="082252509320" class="input-style"></div>
+                        </div>
+                        <div><label>Bank Lokal</label><input type="text" id="bank" value="7805498820 - BCA" class="input-style"></div>
+                        <div><label>Thumb Bot (global.thumb)</label><input type="file" id="f_thumb" class="text-xs"></div>
+                        <div><label>QRIS (global.urlQRIS)</label><input type="file" id="f_qris" class="text-xs"></div>
+                        <div><label>Gambar Store (global.gambarstore)</label><input type="file" id="f_store" class="text-xs"></div>
+                    </div>
+                </div>
+
+                <div class="glass mandatory p-6 rounded-2xl">
+                    <h2 class="text-red-500 font-black mb-4 flex items-center gap-2"><i class="fas fa-tower-broadcast"></i> ❗❗ CHANNELS</h2>
+                    <div class="space-y-4">
+                        <div><label>ID Saluran Utama</label><input type="text" id="saluran" value="120363404526254542@newsletter" class="input-style"></div>
+                        <div><label>ID Saluran Daftar</label><input type="text" id="salurandaftar" value="120363404521774863@newsletter" class="input-style"></div>
+                        <div><label>ID Saluran PlayCH</label><input type="text" id="saluranPlayCH" value="120363423182854518@newsletter" class="input-style"></div>
+                        <div><label>ID Saluran Testi</label><input type="text" id="chtesti" value="120363382472238425@newsletter" class="input-style"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="glass optional p-6 rounded-2xl">
+                    <h2 class="text-blue-500 font-black mb-4 flex items-center gap-2"><i class="fas fa-cog"></i> ❕❕ OPSIONAL BOT</h2>
+                    <div class="space-y-4">
+                        <div>
+                            <label>Zona Waktu Utama</label>
+                            <select id="zona" class="input-style">
+                                <option value="WIB">WIB (Jakarta)</option>
+                                <option value="WITA">WITA (Makassar)</option>
+                                <option value="WIT">WIT (Jayapura)</option>
+                            </select>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div><label>Pairing</label><select id="pairing" class="input-style"><option value="true">True</option><option value="false">False</option></select></div>
+                            <div><label>Register</label><select id="register" class="input-style"><option value="true">True</option><option value="false">False</option></select></div>
+                        </div>
+                        <div><label>Port Dashboard</label><input type="text" id="port" value="2064" class="input-style"></div>
+                    </div>
+                </div>
+
+                <div class="glass optional p-6 rounded-2xl overflow-y-auto max-h-80">
+                    <h2 class="text-blue-500 font-black mb-4 flex items-center gap-2"><i class="fas fa-server"></i> ❕❕ PANEL V1 - V5</h2>
+                    <div class="space-y-4">
+                        <div class="border-b border-slate-800 pb-2">
+                            <label class="text-blue-400">Server V1</label>
+                            <input type="text" id="domain" value="https://panelmu.com" class="input-style mb-1" placeholder="Domain">
+                            <input type="password" id="apikey" value="ptla_xxx" class="input-style mb-1" placeholder="PTLA">
+                            <input type="password" id="capikey" value="ptlc_xxx" class="input-style" placeholder="PTLC">
+                        </div>
+                        <div class="border-b border-slate-800 pb-2">
+                            <label class="text-blue-400">Server V2</label>
+                            <input type="text" id="domainV2" value="https://panelmu.com" class="input-style mb-1" placeholder="Domain">
+                            <input type="password" id="apikeyV2" value="ptla_kodenya" class="input-style mb-1" placeholder="PTLA">
+                            <input type="password" id="capikeyV2" value="ptlc_kodenya" class="input-style" placeholder="PTLC">
+                        </div>
+                        <p class="text-[10px] text-slate-500 italic">V3, V4, V5 otomatis dibuat dengan value default (-).</p>
+                    </div>
+                </div>
+
+                <button onclick="process()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded-2xl shadow-xl transition-all transform hover:scale-105 active:scale-95">
+                    GENERATE SETTINGS.JS
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function upload(file) {
+            if (!file) return null;
+            const form = new FormData();
+            form.append('files', file);
+            try {
+                const r = await fetch('https://cdn.yupra.my.id/upload', { method: 'POST', body: form });
+                const j = await r.json(); return `https://cdn.yupra.my.id${j.files[0].url}`;
+            } catch {
+                const c = new FormData(); c.append('reqtype', 'fileupload'); c.append('fileToUpload', file);
+                const cr = await fetch('https://catbox.moe/user/api.php', { method: 'POST', body: c });
+                return await cr.text();
+            }
+        }
+
+        async function process() {
+            document.getElementById('loader').style.display = 'flex';
+            
+            const thumbUrl = await upload(document.getElementById('f_thumb').files[0]) || "https://raw.githubusercontent.com/Rafkasatriya61/uploader-rafkasatriya/main/Uploads/file-1773033130873.jpeg";
+            const qrisUrl = await upload(document.getElementById('f_qris').files[0]) || "https://raw.githubusercontent.com/ChandraGO/Data-Jagoan-Project/refs/heads/master/qris.jpg";
+            const storeUrl = await upload(document.getElementById('f_store').files[0]) || "https://cdn.yupra.my.id/yp/xci48p2m.jpg";
+
+            const v = (id) => document.getElementById(id).value;
+            const owners = v('owner').split(',').map(x => x.trim());
+            const rowners = v('rowner').split(',').map(x => x.trim());
+
+            const content = `import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+import { fetch as undiciFetch } from 'undici'
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+
+// Join Grup Bot untuk setting : https://chat.whatsapp.com/CukngjN3s9MAE0TAQPD4vR
+//-------------------------------------------------------------------------------//
+
+global.owner = [
+${owners.map(o => `    ['${o}', true]`).join(',\n')}
+];
+global.namebot = "${v('namebot')}";
+global.title = "${v('title')}";
+global.sourceurl = '${v('sourceurl')}';
+global.linkgc = ['https://chat.whatsapp.com/Cp2aeGUFhniL2jzt2uKkF1'];
+global.rowner = [${rowners.map(r => `"${r}"`).join(', ')}];
+global.nameowner = "${v('nameowner')}";
+global.nomorown = "${v('nomorown')}";
+global.LIDowner = "${v('lid')}";
+global.saluran = "${v('saluran')}";
+global.salurandaftar = "${v('salurandaftar')}";
+global.saluranPlayCH = "${v('saluranPlayCH')}";
+
+// ====== ZONA WAKTU AUTO SHOLAT ====== \\
+global.zonaWaktu = {
+    WIB: ${v('zona') === 'WIB'},
+    WITA: ${v('zona') === 'WITA'},
+    WIT: ${v('zona') === 'WIT'}
+};
+
+//====== Settingan Store ======\\
+global.namestore = "${v('namestore')}";
+global.dana = "${v('dana')}";
+global.gopay = "${v('gopay')}";
+global.ovo = "${v('ovo')}";
+global.banklokal = "${v('bank')}";
+global.urlQRIS = "${qrisUrl}"; 
+global.gambarstore = "${storeUrl}"; 
+global.chtesti = "${v('chtesti')}";
+
+//====== PAYMENT GATEWAY PAKASIR ======\\
+global.pakasirApi = "bot-whatsapp26"
+global.pakasirKey = "ieAvROZcnjGNMvHjQ4BGcZ9IMQPq7eHL"
+global.templateQRIS = "https://raw.githubusercontent.com/ChandraGO/Data-Jagoan-Project/refs/heads/master/Blue%20and%20Green%20Modern%20Qr%20Code%20Flyer.png"
+
+//====== Rest APi ( JANGAN DI GANTI ) ======\\
+global.jagpro = "https://api.jagoanproject.web.id"
+global.jagprokey = "${v('jagprokey')}";
+global.jagproplus = "${v('jagproplus')}";
+global.apixtermurl = "https://api.termai.cc";
+global.apixtermkey = "jagojago";
+global.apibtc = "https://api.botcahx.eu.org";
+global.btc = "JagPro26";
+global.aksesKey = "Arman"
+global.fayu = { api: 'https://www.fayupedia.id/api', key: 'eeqb4v-hugboy-kuc7wx-harsqv-yrznjt', id: '106606' }
+global.portDashboard = "${v('port')}"
+global.fgsi = "https://fgsi.koyeb.app";
+global.fgsiKey = [ "fgsiapi-ead2fb3-6d", "fgsiapi-1124847d-6d", "fgsiapi-170c8fe-6d", "fgsiapi-af7cf11-6d", "fgsiapi-24a59a4d-6d", "fgsiapi-15725fc4-6d" ]
+global.alyachan = "https://api.alyachan.dev";
+global.alyachankey = "sk_prod_a761b6d0ad20a763b2ea2078d5fb8e4e";
+global.apisiput = "https://siputzx.pages.dev/";
+global.ocrapi = "K89422451988957";
+global.suno = "c4b55cbb9de5d3d029385a4f69e96e29";
+global.elevenLabsApiKey = "sk_95a312ec85ae1ceb42f36d1d6c6edae782413fad575a1535";
+global.geminiApi = ["AIzaSyC8MJWTalvOUnpKoAXjYq1BhDp7Fnb6MGA"];
+global.tokengithub = '${v('github')}';
+
+global.security_api = { base_url: "https://sokjagoan.jagoanproject.web.id/api", token: "N825jeBFseB2W0fcrfIOwRbUl7iX7vbR546ZSiNjhBAQl89ehXmMTgPWDFOtOHRu" };
+
+//====== Settingan Utama Bot ======\\
+global.isPairing = ${v('pairing')};
+global.register = ${v('register')};
+global.thumlistgrup = "https://raw.githubusercontent.com/ChandraGO/Data-Jagoan-Project/refs/heads/master/group-logo-73-5318.png";
+global.sgc = "https://raw.githubusercontent.com/ChandraGO/Data-Jagoan-Project/refs/heads/master/Lucid_Realism_A_vibrant_orange_tabby_cat_with_a_fluffy_coat_an_2.jpg";
+global.sig = "https://raw.githubusercontent.com/ChandraGO/Data-Jagoan-Project/refs/heads/master/Lucid_Realism_A_vibrant_orange_tabby_cat_with_a_fluffy_coat_an_2.jpg";
+global.swa = "wa.me/62895362282300";
+global.version = "Season 4.9";
+global.access_denied = "https://raw.githubusercontent.com/typographuniverse/uploader-Jagpro/main/Uploads/file-1762091733341.jpeg";
+global.maxwarn = "5";
+
+global.icon = "https://raw.githubusercontent.com/typographuniverse/uploader-Jagpro/main/Uploads/file-1756899753178.jpeg";
+global.gifmenu = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTk1aGFyMnVvcGJwYnh2eHQ2Y3pud2xuc3JsMmw4Yzdza3gyOXJwdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6U47YlEnJQNeb05Csh/giphy.mp4"; 
+global.thumb = "${thumbUrl}";
+global.multiplier = 45;
+
+global.done = "\`\`\`Udah Kak 😉\`\`\`";
+global.wait = "\`\`\`Sabar ngab lagi di proses⌛\`\`\`";
+global.eror = "\`Njir Error Kak😱\`, ketik: \\n> .report <fitur errornya>";
+
+global.packname = "${v('packname')}";
+global.author = "${v('author')}";
+
+//====== Setting Panel ====== \\
+global.apiDigitalOcean = "-"
+global.panelgrup ="-"
+global.egg = "15"; global.nestid = "5"; global.loc = "1";
+global.domain = "${v('domain')}"; global.apikey = "${v('apikey')}"; global.capikey = "${v('capikey')}";
+global.domainV2 = "${v('domainV2')}"; global.apikeyV2 = "${v('apikeyV2')}"; global.capikeyV2 = "${v('capikeyV2')}";
+global.domainV3 = "-"; global.apikeyV3 = "-"; global.capikeyV3 = "-";
+global.domainV4 = "-"; global.apikeyV4 = "-"; global.capikeyV4 = "-";
+global.domainV5 = "-"; global.apikeyV5 = "-"; global.capikeyV5 = "-";
+
+global.rpg = { emoticon(s) { return ""; } };
+global.zonaMap = { WIB: "Asia/Jakarta", WITA: "Asia/Makassar", WIT: "Asia/Jayapura" };
+global.getZonaWaktu = function() { return "Asia/Jakarta"; };
+
+import Jimp from "./function/jimp-compat.js";
+import fetch from 'node-fetch';
+import fs from "fs";
+let file = new URL(import.meta.url);
+fs.watchFile(file, async () => {
+  fs.unwatchFile(file);
+  console.log("Update settings.js");
+});`;
+
+            const blob = new Blob([content], { type: 'text/javascript' });
+            const a = document.createElement('a');
+            a.href = URL.createObjectURL(blob);
+            a.download = 'settings.js';
+            a.click();
+            document.getElementById('loader').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
+  
