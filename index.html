@@ -10,7 +10,6 @@
         body { background-color: #020617; color: #cbd5e1; font-family: 'Inter', sans-serif; }
         .glass { background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(51, 65, 85, 0.5); backdrop-filter: blur(10px); }
         .mandatory { border-left: 5px solid #ef4444 !important; }
-        .optional { border-left: 5px solid #3b82f6 !important; }
         .input-style { background: #0f172a !important; border: 1px solid #1e293b !important; color: white !important; width: 100%; padding: 8px; border-radius: 8px; outline: none; font-size: 0.8rem; }
         .input-style:focus { border-color: #3b82f6 !important; }
         label { font-size: 0.65rem; font-weight: 800; color: #94a3b8; display: block; margin-bottom: 3px; text-transform: uppercase; }
@@ -24,75 +23,37 @@
         <p class="mt-4 font-bold text-white tracking-widest">UPLOADING MEDIA TO CDN...</p>
     </div>
 
-    <div class="max-w-7xl mx-auto">
+    <div class="max-w-5xl mx-auto">
         <header class="mb-10 text-center md:text-left border-b border-slate-800 pb-6">
             <h1 class="text-3xl font-black text-white italic">SETTINGS.<span class="text-blue-500">JS</span> BUILDER</h1>
             <p class="text-sm text-slate-500">Full Configurator sesuai petunjuk ❗❗ dan ❕❕</p>
         </header>
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
             <div class="space-y-6">
                 <div class="glass mandatory p-6 rounded-2xl">
                     <h2 class="text-red-500 font-black mb-4 flex items-center gap-2"><i class="fas fa-exclamation-circle"></i> ❗❗ IDENTITAS & OWNER</h2>
                     <div class="space-y-4">
-                        <div><label>Owner Numbers (Koma)</label><textarea id="owner" class="input-style h-16">6285178399532, 628812946724, 6289680403022</textarea></div>
-                        <div><label>Nama Bot</label><input type="text" id="namebot" value="RafkaVL Botzz" class="input-style"></div>
-                        <div><label>Title Saluran</label><input type="text" id="title" value="Rafkasatriya61" class="input-style"></div>
-                        <div><label>Link Saluran (sourceurl)</label><input type="text" id="sourceurl" value="https://whatsapp.com/channel/..." class="input-style"></div>
-                        <div><label>Rowner (Koma)</label><input type="text" id="rowner" value="6285178399532, 6281549236243" class="input-style"></div>
-                        <div><label>Nama Owner</label><input type="text" id="nameowner" value="RafkaSatriya" class="input-style"></div>
-                        <div><label>Nomor Own (Auto Backup)</label><input type="text" id="nomorown" value="6285178399532" class="input-style"></div>
-                        <div><label>LID Owner (Getlid)</label><input type="text" id="lid" value="200489811583048" class="input-style"></div>
+                        <div><label>Owner Numbers (Koma)</label><textarea id="owner" class="input-style h-16" placeholder="Misal: 6285178399532, 628812946724"></textarea></div>
+                        <div><label>Nama Bot</label><input type="text" id="namebot" class="input-style" placeholder="Masukkan nama bot"></div>
+                        <div><label>Title Saluran</label><input type="text" id="title" class="input-style" placeholder="Masukkan title saluran"></div>
+                        <div><label>Link Saluran (sourceurl)</label><input type="text" id="sourceurl" class="input-style" placeholder="Masukkan link saluran"></div>
+                        <div><label>Rowner (Koma)</label><input type="text" id="rowner" class="input-style" placeholder="Misal: 6285178399532, 6281549236243"></div>
+                        <div><label>Nama Owner</label><input type="text" id="nameowner" class="input-style" placeholder="Masukkan nama owner"></div>
+                        <div><label>Nomor Own (Auto Backup)</label><input type="text" id="nomorown" class="input-style" placeholder="Nomor untuk auto backup"></div>
+                        <div><label>LID Owner (Getlid)</label><input type="text" id="lid" class="input-style" placeholder="Masukkan LID owner"></div>
                         <div class="grid grid-cols-2 gap-2">
-                            <div><label>Packname</label><input type="text" id="packname" value="RafkaVL Botzz" class="input-style"></div>
-                            <div><label>Author</label><input type="text" id="author" value="Made By RafkaSatriya61" class="input-style"></div>
+                            <div><label>Packname</label><input type="text" id="packname" class="input-style" placeholder="Nama pack sticker"></div>
+                            <div><label>Author</label><input type="text" id="author" class="input-style" placeholder="Author sticker"></div>
                         </div>
-                    </div>
-                </div>
-
-                <div class="glass mandatory p-6 rounded-2xl">
-                    <h2 class="text-red-500 font-black mb-4 flex items-center gap-2"><i class="fas fa-key"></i> ❗❗ API & KEYS</h2>
-                    <div class="space-y-4">
-                        <div><label>Jagpro Key</label><input type="text" id="jagprokey" value="ceweakuafnii" class="input-style"></div>
-                        <div><label>Jagpro Plus Key</label><input type="text" id="jagproplus" value="ceweguaafnii" class="input-style"></div>
-                        <div><label>Github Token</label><input type="password" id="github" value="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" class="input-style"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="space-y-6">
-                <div class="glass mandatory p-6 rounded-2xl">
-                    <h2 class="text-red-500 font-black mb-4 flex items-center gap-2"><i class="fas fa-store"></i> ❗❗ STORE & PAY</h2>
-                    <div class="space-y-4">
-                        <div><label>Nama Store</label><input type="text" id="namestore" value="RafkaVL Store" class="input-style"></div>
-                        <div class="grid grid-cols-3 gap-2">
-                            <div><label>Dana</label><input type="text" id="dana" value="082252509320" class="input-style"></div>
-                            <div><label>Gopay</label><input type="text" id="gopay" value="082252509320" class="input-style"></div>
-                            <div><label>Ovo</label><input type="text" id="ovo" value="082252509320" class="input-style"></div>
+                        <div>
+                            <label>Thumb Bot (global.thumb)</label>
+                            <div class="flex items-center gap-2">
+                                <input type="file" id="f_thumb" class="text-xs w-full text-slate-300">
+                                <button type="button" onclick="document.getElementById('f_thumb').value=''" class="bg-red-600 hover:bg-red-500 text-white px-3 py-1 rounded text-xs transition-colors" title="Cancel/Clear File"><i class="fas fa-times"></i></button>
+                            </div>
                         </div>
-                        <div><label>Bank Lokal</label><input type="text" id="bank" value="7805498820 - BCA" class="input-style"></div>
-                        <div><label>Thumb Bot (global.thumb)</label><input type="file" id="f_thumb" class="text-xs"></div>
-                        <div><label>QRIS (global.urlQRIS)</label><input type="file" id="f_qris" class="text-xs"></div>
-                        <div><label>Gambar Store (global.gambarstore)</label><input type="file" id="f_store" class="text-xs"></div>
-                    </div>
-                </div>
-
-                <div class="glass mandatory p-6 rounded-2xl">
-                    <h2 class="text-red-500 font-black mb-4 flex items-center gap-2"><i class="fas fa-tower-broadcast"></i> ❗❗ CHANNELS</h2>
-                    <div class="space-y-4">
-                        <div><label>ID Saluran Utama</label><input type="text" id="saluran" value="120363404526254542@newsletter" class="input-style"></div>
-                        <div><label>ID Saluran Daftar</label><input type="text" id="salurandaftar" value="120363404521774863@newsletter" class="input-style"></div>
-                        <div><label>ID Saluran PlayCH</label><input type="text" id="saluranPlayCH" value="120363423182854518@newsletter" class="input-style"></div>
-                        <div><label>ID Saluran Testi</label><input type="text" id="chtesti" value="120363382472238425@newsletter" class="input-style"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="space-y-6">
-                <div class="glass optional p-6 rounded-2xl">
-                    <h2 class="text-blue-500 font-black mb-4 flex items-center gap-2"><i class="fas fa-cog"></i> ❕❕ OPSIONAL BOT</h2>
-                    <div class="space-y-4">
                         <div>
                             <label>Zona Waktu Utama</label>
                             <select id="zona" class="input-style">
@@ -101,38 +62,74 @@
                                 <option value="WIT">WIT (Jayapura)</option>
                             </select>
                         </div>
-                        <div class="grid grid-cols-2 gap-2">
-                            <div><label>Pairing</label><select id="pairing" class="input-style"><option value="true">True</option><option value="false">False</option></select></div>
-                            <div><label>Register</label><select id="register" class="input-style"><option value="true">True</option><option value="false">False</option></select></div>
-                        </div>
-                        <div><label>Port Dashboard</label><input type="text" id="port" value="2064" class="input-style"></div>
                     </div>
                 </div>
 
-                <div class="glass optional p-6 rounded-2xl overflow-y-auto max-h-80">
-                    <h2 class="text-blue-500 font-black mb-4 flex items-center gap-2"><i class="fas fa-server"></i> ❕❕ PANEL V1 - V5</h2>
+                <div class="glass mandatory p-6 rounded-2xl">
+                    <h2 class="text-red-500 font-black mb-4 flex items-center gap-2"><i class="fas fa-key"></i> ❗❗ API & KEYS</h2>
                     <div class="space-y-4">
-                        <div class="border-b border-slate-800 pb-2">
-                            <label class="text-blue-400">Server V1</label>
-                            <input type="text" id="domain" value="https://panelmu.com" class="input-style mb-1" placeholder="Domain">
-                            <input type="password" id="apikey" value="ptla_xxx" class="input-style mb-1" placeholder="PTLA">
-                            <input type="password" id="capikey" value="ptlc_xxx" class="input-style" placeholder="PTLC">
+                        <div><label>Jagpro Key</label><input type="text" id="jagprokey" class="input-style" placeholder="Masukkan Jagpro Key"></div>
+                        <div><label>Jagpro Plus Key</label><input type="text" id="jagproplus" class="input-style" placeholder="Masukkan Jagpro Plus Key"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="space-y-6">
+                <div class="glass mandatory p-6 rounded-2xl">
+                    <h2 class="text-red-500 font-black mb-4 flex items-center gap-2"><i class="fas fa-store"></i> ❗❗ STORE & PAY</h2>
+                    <div class="space-y-4">
+                        <div><label>Nama Store</label><input type="text" id="namestore" class="input-style" placeholder="Masukkan nama store"></div>
+                        <div class="grid grid-cols-3 gap-2">
+                            <div><label>Dana</label><input type="text" id="dana" class="input-style" placeholder="Nomor Dana"></div>
+                            <div><label>Gopay</label><input type="text" id="gopay" class="input-style" placeholder="Nomor Gopay"></div>
+                            <div><label>Ovo</label><input type="text" id="ovo" class="input-style" placeholder="Nomor OVO"></div>
                         </div>
-                        <div class="border-b border-slate-800 pb-2">
-                            <label class="text-blue-400">Server V2</label>
-                            <input type="text" id="domainV2" value="https://panelmu.com" class="input-style mb-1" placeholder="Domain">
-                            <input type="password" id="apikeyV2" value="ptla_kodenya" class="input-style mb-1" placeholder="PTLA">
-                            <input type="password" id="capikeyV2" value="ptlc_kodenya" class="input-style" placeholder="PTLC">
+                        <div><label>Bank Lokal</label><input type="text" id="bank" class="input-style" placeholder="Misal: 12345678 - BCA"></div>
+                        
+                        <div class="border-t border-slate-800 pt-4 mt-2">
+                            <label class="text-blue-400 mb-2">PAYMENT GATEWAY (PAKASIR)</label>
+                            <div><label>Pakasir API</label><input type="text" id="pakasirapi" class="input-style mb-2" placeholder="Masukkan Pakasir API (Misal: bot-whatsapp26)"></div>
+                            <div><label>Pakasir Key</label><input type="text" id="pakasirkey" class="input-style mb-2" placeholder="Masukkan Pakasir Key"></div>
+                            <div class="text-xs text-slate-400">
+                                <i class="fab fa-youtube text-red-500"></i> Tutorial dapet key Pakasir: <a href="https://youtube.com/shorts/8ibmiI_PE_M?si=yhSXNfED6ef4nU8j" target="_blank" class="text-blue-400 hover:text-blue-300 underline">Tonton di sini</a>
+                            </div>
                         </div>
-                        <p class="text-[10px] text-slate-500 italic">V3, V4, V5 otomatis dibuat dengan value default (-).</p>
+
+                        <div class="border-t border-slate-800 pt-4 mt-2">
+                            <div>
+                                <label>QRIS (global.urlQRIS)</label>
+                                <div class="flex items-center gap-2">
+                                    <input type="file" id="f_qris" class="text-xs w-full text-slate-300">
+                                    <button type="button" onclick="document.getElementById('f_qris').value=''" class="bg-red-600 hover:bg-red-500 text-white px-3 py-1 rounded text-xs transition-colors" title="Cancel/Clear File"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                            <div class="mt-4">
+                                <label>Gambar Store (global.gambarstore)</label>
+                                <div class="flex items-center gap-2">
+                                    <input type="file" id="f_store" class="text-xs w-full text-slate-300">
+                                    <button type="button" onclick="document.getElementById('f_store').value=''" class="bg-red-600 hover:bg-red-500 text-white px-3 py-1 rounded text-xs transition-colors" title="Cancel/Clear File"><i class="fas fa-times"></i></button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <button onclick="process()" class="w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded-2xl shadow-xl transition-all transform hover:scale-105 active:scale-95">
-                    GENERATE SETTINGS.JS
-                </button>
+                <div class="glass mandatory p-6 rounded-2xl">
+                    <h2 class="text-red-500 font-black mb-4 flex items-center gap-2"><i class="fas fa-tower-broadcast"></i> ❗❗ CHANNELS</h2>
+                    <div class="space-y-4">
+                        <div><label>ID Saluran Utama</label><input type="text" id="saluran" class="input-style" placeholder="Masukkan ID Saluran Utama"></div>
+                        <div><label>ID Saluran Daftar</label><input type="text" id="salurandaftar" class="input-style" placeholder="Masukkan ID Saluran Daftar"></div>
+                        <div><label>ID Saluran PlayCH</label><input type="text" id="saluranPlayCH" class="input-style" placeholder="Masukkan ID Saluran PlayCH"></div>
+                        <div><label>ID Saluran Testi</label><input type="text" id="chtesti" class="input-style" placeholder="Masukkan ID Saluran Testi"></div>
+                    </div>
+                </div>
             </div>
+
         </div>
+        
+        <button onclick="process()" class="mt-8 w-full bg-blue-600 hover:bg-blue-500 text-white font-black py-4 rounded-2xl shadow-xl transition-all transform hover:scale-105 active:scale-95">
+            GENERATE SETTINGS.JS
+        </button>
     </div>
 
     <script>
@@ -158,8 +155,14 @@
             const storeUrl = await upload(document.getElementById('f_store').files[0]) || "https://cdn.yupra.my.id/yp/xci48p2m.jpg";
 
             const v = (id) => document.getElementById(id).value;
-            const owners = v('owner').split(',').map(x => x.trim());
-            const rowners = v('rowner').split(',').map(x => x.trim());
+            const ownersRaw = v('owner');
+            const owners = ownersRaw ? ownersRaw.split(',').map(x => x.trim()).filter(x => x !== "") : [];
+            
+            const rownersRaw = v('rowner');
+            const rowners = rownersRaw ? rownersRaw.split(',').map(x => x.trim()).filter(x => x !== "") : [];
+
+            const p_api = v('pakasirapi') || "bot-whatsapp26";
+            const p_key = v('pakasirkey') || "ieAvROZcnjGNMvHjQ4BGcZ9IMQPq7eHL";
 
             const content = `import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -173,110 +176,348 @@ const require = createRequire(import.meta.url);
 //-------------------------------------------------------------------------------//
 
 global.owner = [
-${owners.map(o => `    ['${o}', true]`).join(',\n')}
+${owners.length > 0 ? owners.map(o => `    ['${o}', true]`).join(',\n') : "    ['', true]"}
 ];
-global.namebot = "${v('namebot')}";
-global.title = "${v('title')}";
-global.sourceurl = '${v('sourceurl')}';
-global.linkgc = ['https://chat.whatsapp.com/Cp2aeGUFhniL2jzt2uKkF1'];
-global.rowner = [${rowners.map(r => `"${r}"`).join(', ')}];
-global.nameowner = "${v('nameowner')}";
-global.nomorown = "${v('nomorown')}";
-global.LIDowner = "${v('lid')}";
-global.saluran = "${v('saluran')}";
-global.salurandaftar = "${v('salurandaftar')}";
-global.saluranPlayCH = "${v('saluranPlayCH')}";
+global.namebot = "${v('namebot')}"; //Nama Bot
+global.title = "${v('title')}";//Nama Saluran Bot
+global.sourceurl = '${v('sourceurl')}' //Link Saluran
+global.linkgc = [
+ 'https://chat.whatsapp.com/Cp2aeGUFhniL2jzt2uKkF1', // link 1
+] // LINK GROUP BOT
+global.rowner = [${rowners.length > 0 ? rowners.map(r => `"${r}"`).join(', ') : '""'}]; //nomor Owner Utama
+global.nameowner = "${v('nameowner')}"; //Nama Owner
+global.nomorown = "${v('nomorown')}"; // WAJIB SATU NOMOR, KARENA INI NOMOR UNTUUK KIRIM AUTO BACKUPSC
+global.LIDowner = "${v('lid')}";// BUKAN NOMOR HP, SETTING KALAU SUDAH JALAN BOT KETIK .getlid
+global.saluran = "${v('saluran')}";// Saluran Utama
+global.salurandaftar = "${v('salurandaftar')}";// bot ngirim data pendaftaraan user ke slauran Khusus, syaratnya bot wajib admin di saluran tersebut
+global.saluranPlayCH = "${v('saluranPlayCH')}";// isi kalau mau bot ngirim musik ke saluran ( WJIB ADMIN ) ❗❗
+//=========================================================================>
 
-// ====== ZONA WAKTU AUTO SHOLAT ====== \\
+// ====== ZONA WAKTU AUTO SHOLAT (Pilih SATU saja dengan true, Sesuai Lokasi kalian mau ) ====== \\
 global.zonaWaktu = {
-    WIB: ${v('zona') === 'WIB'},
-    WITA: ${v('zona') === 'WITA'},
-    WIT: ${v('zona') === 'WIT'}
+    WIB: ${v('zona') === 'WIB'},   // Jakarta, UTC+7
+    WITA: ${v('zona') === 'WITA'},    // Makassar, UTC+8
+    WIT: ${v('zona') === 'WIT'}    // Jayapura, UTC+9
 };
 
-//====== Settingan Store ======\\
-global.namestore = "${v('namestore')}";
-global.dana = "${v('dana')}";
+//====== Settingan ini untuk Store kalian di Bot ======\\
+global.namestore = "${v('namestore')}";  //isi nama toko kalian
+global.dana = "${v('dana')}"; //metode pembayaran
 global.gopay = "${v('gopay')}";
 global.ovo = "${v('ovo')}";
 global.banklokal = "${v('bank')}";
 global.urlQRIS = "${qrisUrl}"; 
-global.gambarstore = "${storeUrl}"; 
-global.chtesti = "${v('chtesti')}";
+global.gambarstore = "${storeUrl}"; // ISI GAMBAR STORE KALIAN 
+global.chtesti = "${v('chtesti')}"; // isi ID Ch testi kalian kalau ada khsuus untuk Testi
+//=========================================================================>
 
-//====== PAYMENT GATEWAY PAKASIR ======\\
-global.pakasirApi = "bot-whatsapp26"
-global.pakasirKey = "ieAvROZcnjGNMvHjQ4BGcZ9IMQPq7eHL"
-global.templateQRIS = "https://raw.githubusercontent.com/ChandraGO/Data-Jagoan-Project/refs/heads/master/Blue%20and%20Green%20Modern%20Qr%20Code%20Flyer.png"
+//====== Setting PAYMENT GATEWAY PAKASIR ( WAJIB GANTI AKUN KALIAN BIAR DAPAT UANG AKLAU ADA YG TRANSAKSI DI BOT ) ======\\
+global.pakasirApi = "${p_api}"
+global.pakasirKey = "${p_key}"
+// Tonton Video mendapatkan ID kEY DAN Key DI : https://youtube.com/shorts/8ibmiI_PE_M?si=yhSXNfED6ef4nU8j
+//====== Setting PAYMENT GATEWAY QIOSPAY ======\\
 
-//====== Rest APi ( JANGAN DI GANTI ) ======\\
+
+//====== Link Rest APi ( JANGAN DI GANTI ) ======\\
 global.jagpro = "https://api.jagoanproject.web.id"
-global.jagprokey = "${v('jagprokey')}";
-global.jagproplus = "${v('jagproplus')}";
+global.jagprokey = "${v('jagprokey')}";//
+global.jagproplus = "${v('jagproplus')}"
 global.apixtermurl = "https://api.termai.cc";
-global.apixtermkey = "jagojago";
+global.apixtermkey = "jagojago"; // Apikey Chandra
+//
 global.apibtc = "https://api.botcahx.eu.org";
 global.btc = "JagPro26";
 global.aksesKey = "Arman"
-global.fayu = { api: 'https://www.fayupedia.id/api', key: 'eeqb4v-hugboy-kuc7wx-harsqv-yrznjt', id: '106606' }
-global.portDashboard = "${v('port')}"
+global.fayu = {
+    api: 'https://www.fayupedia.id/api',
+    key: 'eeqb4v-hugboy-kuc7wx-harsqv-yrznjt',
+    id: '106606'
+}
+//
+global.portDashboard = "2064" // Default port panel
 global.fgsi = "https://fgsi.koyeb.app";
 global.fgsiKey = [ "fgsiapi-ead2fb3-6d", "fgsiapi-1124847d-6d", "fgsiapi-170c8fe-6d", "fgsiapi-af7cf11-6d", "fgsiapi-24a59a4d-6d", "fgsiapi-15725fc4-6d" ]
-global.alyachan = "https://api.alyachan.dev";
+//
+global.alyachan = "https://api.alyachan.dev"
 global.alyachankey = "sk_prod_a761b6d0ad20a763b2ea2078d5fb8e4e";
+//
 global.apisiput = "https://siputzx.pages.dev/";
 global.ocrapi = "K89422451988957";
-global.suno = "c4b55cbb9de5d3d029385a4f69e96e29";
+global.suno = "c4b55cbb9de5d3d029385a4f69e96e29"; // kalau habis ambil api pakai akun sendiri yaa, gratis : https://sunoapi.org/api-key
 global.elevenLabsApiKey = "sk_95a312ec85ae1ceb42f36d1d6c6edae782413fad575a1535";
-global.geminiApi = ["AIzaSyC8MJWTalvOUnpKoAXjYq1BhDp7Fnb6MGA"];
-global.tokengithub = '${v('github')}';
+global.geminiApi = [
+"AIzaSyC8MJWTalvOUnpKoAXjYq1BhDp7Fnb6MGA"
+];
 
-global.security_api = { base_url: "https://sokjagoan.jagoanproject.web.id/api", token: "N825jeBFseB2W0fcrfIOwRbUl7iX7vbR546ZSiNjhBAQl89ehXmMTgPWDFOtOHRu" };
+global.tokengithub = "-" // Fungsi ini untuk fitur storage dan togithub
+
+//=========================================================================>
+//====== JANGAN DI GANTI ======\\
+global.security_api = {
+    base_url: "https://sokjagoan.jagoanproject.web.id/api", // URL website
+    token: "N825jeBFseB2W0fcrfIOwRbUl7iX7vbR546ZSiNjhBAQl89ehXmMTgPWDFOtOHRu", // Copy dari Menu 'API Access' di Panel
+ 
+};
+//====== JANGAN DI GANTI ======\\
 
 //====== Settingan Utama Bot ======\\
-global.isPairing = ${v('pairing')};
-global.register = ${v('register')};
-global.thumlistgrup = "https://raw.githubusercontent.com/ChandraGO/Data-Jagoan-Project/refs/heads/master/group-logo-73-5318.png";
+global.isPairing = true; //Mau pake pairing? true = idup, false = mati
+global.register = true; // true = semua command yang punya handler.register wajib daftar, false = tanpa daftar
+global.thumlistgrup = "https://raw.githubusercontent.com/ChandraGO/Data-Jagoan-Project/refs/heads/master/group-logo-73-5318.png" //List Grup  
 global.sgc = "https://raw.githubusercontent.com/ChandraGO/Data-Jagoan-Project/refs/heads/master/Lucid_Realism_A_vibrant_orange_tabby_cat_with_a_fluffy_coat_an_2.jpg";
 global.sig = "https://raw.githubusercontent.com/ChandraGO/Data-Jagoan-Project/refs/heads/master/Lucid_Realism_A_vibrant_orange_tabby_cat_with_a_fluffy_coat_an_2.jpg";
 global.swa = "wa.me/62895362282300";
 global.version = "Season 4.9";
 global.access_denied = "https://raw.githubusercontent.com/typographuniverse/uploader-Jagpro/main/Uploads/file-1762091733341.jpeg";
-global.maxwarn = "5";
+global.maxwarn = "5"; // Jumlah Peringatan maximal
 
+//====== Settingan Utama Bot ======\\
 global.icon = "https://raw.githubusercontent.com/typographuniverse/uploader-Jagpro/main/Uploads/file-1756899753178.jpeg";
 global.gifmenu = "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTk1aGFyMnVvcGJwYnh2eHQ2Y3pud2xuc3JsMmw4Yzdza3gyOXJwdSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/6U47YlEnJQNeb05Csh/giphy.mp4"; 
 global.thumb = "${thumbUrl}";
 global.multiplier = 45;
 
+//Respon
 global.done = "\`\`\`Udah Kak 😉\`\`\`";
 global.wait = "\`\`\`Sabar ngab lagi di proses⌛\`\`\`";
 global.eror = "\`Njir Error Kak😱\`, ketik: \\n> .report <fitur errornya>";
 
+//Nama Sticker di Bot
 global.packname = "${v('packname')}";
 global.author = "${v('author')}";
+//=========================================================================>
 
-//====== Setting Panel ====== \\
+
+//====== Setting Panel ======\\
 global.apiDigitalOcean = "-"
-global.panelgrup ="-"
-global.egg = "15"; global.nestid = "5"; global.loc = "1";
-global.domain = "${v('domain')}"; global.apikey = "${v('apikey')}"; global.capikey = "${v('capikey')}";
-global.domainV2 = "${v('domainV2')}"; global.apikeyV2 = "${v('apikeyV2')}"; global.capikeyV2 = "${v('capikeyV2')}";
-global.domainV3 = "-"; global.apikeyV3 = "-"; global.capikeyV3 = "-";
-global.domainV4 = "-"; global.apikeyV4 = "-"; global.capikeyV4 = "-";
-global.domainV5 = "-"; global.apikeyV5 = "-"; global.capikeyV5 = "-";
+global.panelgrup ="-" // masukkan link grup panel kamu
 
-global.rpg = { emoticon(s) { return ""; } };
-global.zonaMap = { WIB: "Asia/Jakarta", WITA: "Asia/Makassar", WIT: "Asia/Jayapura" };
-global.getZonaWaktu = function() { return "Asia/Jakarta"; };
+//Server v1
+global.egg = "15" // Egg ID
+global.nestid = "5" // nest ID
+global.loc = "1" // Location ID
+global.domain = "-"
+global.apikey = "-" //ptla
+global.capikey = "-" //ptlc
 
+//Server v2
+global.eggV2 = "15" 
+global.nestidV2 = "5" 
+global.locV2 = "1" 
+global.domainV2 = "-"
+global.apikeyV2 = "-" //ptla
+global.capikeyV2 = "-" //ptlc
+ 
+//Server 3 
+global.eggV3 = "15"
+global.nestidV3 = "5"
+global.locV3 = "1"
+global.domainV3 = "https://-"
+global.apikeyV3 = "-"
+global.capikeyV3 = "-"
+ 
+//Server 4
+global.eggV4 = "15"
+global.nestidV4 = "5"
+global.locV4 = "1"
+global.domainV4 = "https://-"
+global.apikeyV4 = "-"
+global.capikeyV4 = "-"
+ 
+//Server 5
+global.eggV5 = "15"
+global.nestidV5 = "5"
+global.locV5 = "1"
+global.domainV5 = "https://-"
+global.apikeyV5 = "-"
+global.capikeyV5 = "-"
+//=========================================================================>
+
+global.rpg = {
+  emoticon(string) {
+    string = string.toLowerCase();
+    let emot = {
+      exp: "✉️",
+      money: "💵",
+      potion: "🥤",
+      diamond: "💎",
+      common: "📦",
+      uncommon: "🎁",
+      mythic: "🗳️",
+      legendary: "🗃️",
+      pet: "🎁",
+      sampah: "🗑",
+      armor: "🥼",
+      sword: "⚔️",
+      kayu: "🪵",
+      batu: "🪨",
+      string: "🕸️",
+      kuda: "🐎",
+      kucing: "🐈",
+      anjing: "🐕",
+      petFood: "🍖",
+      gold: "👑",
+      emerald: "💚",
+    };
+    let results = Object.keys(emot)
+      .map((v) => [v, new RegExp(v, "gi")])
+      .filter((v) => v[1].test(string));
+    if (!results.length) return "";
+    else return emot[results[0][0]];
+  },
+};
+
+
+//=========================================================================> 
+
+
+// Daftar zona waktu yang didukung
+global.zonaMap = {
+    WIB:  "Asia/Jakarta",
+    WITA: "Asia/Makassar",
+    WIT:  "Asia/Jayapura"
+};
+
+// Fungsi untuk mendapatkan zona waktu aktif
+global.getZonaWaktu = function() {
+    for (let [nama, aktif] of Object.entries(this.zonaWaktu)) {
+        if (aktif) {
+            return this.zonaMap[nama];
+        }
+    }
+    return "Asia/Jakarta"; // default fallback
+};
+//=========================================================================>
 import Jimp from "./function/jimp-compat.js";
 import fetch from 'node-fetch';
+let resizeThumb =  resize(thumb, 300, 250)
+global.Thumbnails = resizeThumb;
+
+/*====[ FAKE THUMBNAIL ACCESS DENIED ]======*/
+
+global.danied = {
+  contextInfo: {
+    mentionedJid: [],
+    groupMentions: [],
+    isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: saluran,
+      newsletterName: namebot,
+      serverMessageId: -1
+    },
+    forwardingScore: 256,
+    externalAdReply: {
+      title: \`UPSS!! AKSES DITOLAK\`,
+      body: null,
+      thumbnailUrl: access_denied,
+      sourceUrl: sgc,
+      mediaType: 1,
+      renderLargerThumbnail: true
+    }
+  }
+}
+
+/*========[ GLOBAL ADREPLY ]============*/
+global.adReply = {
+  contextInfo: {
+    mentionedJid: [],
+    groupMentions: [],
+    isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: saluran,
+      newsletterName: namebot,
+      serverMessageId: -1
+    },
+    forwardingScore: 256,
+    externalAdReply: {
+      title: title,
+      body: namebot,
+      thumbnailUrl: thumb,
+      sourceUrl: saluran,
+      mediaType: 1,
+      renderLargerThumbnail: true
+    }
+  }
+}
+
+/*=========[ FAKE IG ( SMALL AD REPLY ) ]==============*/
+
+global.fakeig = {
+  contextInfo: {
+    mentionedJid: [],
+    groupMentions: [],
+    isForwarded: true,
+    forwardedNewsletterMessageInfo: {
+      newsletterJid: saluran,
+      newsletterName: namebot,
+      serverMessageId: -1         
+    },
+    forwardingScore: 256,
+    externalAdReply: {
+      title: title,
+      body: namebot,
+      thumbnailUrl: icon,
+      sourceUrl: saluran,
+      mediaType: 1,
+      renderLargerThumbnail: false
+    }
+  }
+}
+
+
+async function resize(url, width, height, referer = null) {
+  try {
+    const fetchOptions = {
+      redirect: 'follow',
+      headers: {},
+    };
+
+    if (referer) {
+      fetchOptions.headers['Referer'] = referer;
+    }
+
+    const response = await fetch(url, fetchOptions);
+
+    if (response.ok) {
+      const finalUrl = response.url;
+      const arrayBuffer = await response.arrayBuffer();
+      return await Jimp.read(Buffer.from(arrayBuffer)).then(image => image.resize(width, height).getBufferAsync(Jimp.MIME_JPEG));
+    } else {
+      throw new Error(\`HTTP error! Status: \${response.status}\`);
+    }
+  } catch (error) {
+    console.error('Error:', error.message);
+
+    try {
+      const undiciFetchOptions = {
+        redirect: 'follow',
+        headers: {},
+      };
+
+      if (referer) {
+        undiciFetchOptions.headers['Referer'] = referer;
+        }
+
+     const arrayBuffer = await fetch(url, undiciFetchOptions)
+  .then(response => response.arrayBuffer());
+      return await Jimp.read(Buffer.from(arrayBuffer)).then(image => image.resize(width, height).getBufferAsync(Jimp.MIME_JPEG));
+    } catch (retryError) {
+      console.error('Retry Error:', retryError.message);
+      return Buffer.from([]);
+    }
+  }
+}
+
+function pickRandom(list) {
+  return list[Math.floor(list.length * Math.random())];
+}
 import fs from "fs";
 let file = new URL(import.meta.url);
 fs.watchFile(file, async () => {
   fs.unwatchFile(file);
   console.log("Update settings.js");
+  const module = await import(\`\${file}?update=\${Date.now()}\`);
+  Object.assign(global, module);
 });`;
 
             const blob = new Blob([content], { type: 'text/javascript' });
@@ -289,4 +530,3 @@ fs.watchFile(file, async () => {
     </script>
 </body>
 </html>
-  
