@@ -35,13 +35,13 @@
                 <div class="glass mandatory p-6 rounded-2xl">
                     <h2 class="text-red-500 font-black mb-4 flex items-center gap-2"><i class="fas fa-exclamation-circle"></i> ❗❗ IDENTITAS & OWNER</h2>
                     <div class="space-y-4">
-                        <div><label>Owner Numbers (Koma)</label><textarea id="owner" class="input-style h-16" placeholder="Misal: 6285178399532, 628812946724"></textarea></div>
+                        <div><label>Owner Numbers (Koma)</label><textarea id="owner" class="input-style h-16" placeholder="Misal: 62899xxxxxxxxx, 62851xxxxxxxxx"></textarea></div>
                         <div><label>Nama Bot</label><input type="text" id="namebot" class="input-style" placeholder="Masukkan nama bot"></div>
                         <div><label>Title Saluran</label><input type="text" id="title" class="input-style" placeholder="Masukkan title saluran"></div>
                         <div><label>Link Saluran (sourceurl)</label><input type="text" id="sourceurl" class="input-style" placeholder="Masukkan link saluran"></div>
-                        <div><label>Rowner (Koma)</label><input type="text" id="rowner" class="input-style" placeholder="Misal: 6285178399532, 6281549236243"></div>
+                        <div><label>Rowner (Koma)</label><input type="text" id="rowner" class="input-style" placeholder="Misal: 62899xxxxxxxxx, 62851xxxxxxxxx"></div>
                         <div><label>Nama Owner</label><input type="text" id="nameowner" class="input-style" placeholder="Masukkan nama owner"></div>
-                        <div><label>Nomor Own (Auto Backup)</label><input type="text" id="nomorown" class="input-style" placeholder="Nomor untuk auto backup"></div>
+                        <div><label>Nomor Own (Auto Backup)</label><input type="text" id="nomorown" class="input-style" placeholder="Misal: 62899xxxxxxxxx"></div>
                         <div><label>LID Owner (Getlid)</label><input type="text" id="lid" class="input-style" placeholder="Masukkan LID owner"></div>
                         <div class="grid grid-cols-2 gap-2">
                             <div><label>Packname</label><input type="text" id="packname" class="input-style" placeholder="Nama pack sticker"></div>
@@ -80,9 +80,9 @@
                     <div class="space-y-4">
                         <div><label>Nama Store</label><input type="text" id="namestore" class="input-style" placeholder="Masukkan nama store"></div>
                         <div class="grid grid-cols-3 gap-2">
-                            <div><label>Dana</label><input type="text" id="dana" class="input-style" placeholder="Misal: 0856xxxxxxxxx"></div>
-                            <div><label>Gopay</label><input type="text" id="gopay" class="input-style" placeholder="Misal: 0856xxxxxxxxx"></div>
-                            <div><label>Ovo</label><input type="text" id="ovo" class="input-style" placeholder="Misal: 0856xxxxxxxxx"></div>
+                            <div><label>Dana</label><input type="text" id="dana" class="input-style" placeholder="Misal: 62899xxxxxxxxx"></div>
+                            <div><label>Gopay</label><input type="text" id="gopay" class="input-style" placeholder="Misal: 62851xxxxxxxxx"></div>
+                            <div><label>Ovo</label><input type="text" id="ovo" class="input-style" placeholder="Misal: 62899xxxxxxxxx"></div>
                         </div>
                         <div><label>Bank Lokal</label><input type="text" id="bank" class="input-style" placeholder="Misal: 12345678 - BCA"></div>
                         
@@ -148,6 +148,16 @@
         }
 
         async function process() {
+            // Validasi: Wajib terisi semua
+            const inputs = document.querySelectorAll('.input-style');
+            for (let el of inputs) {
+                if (!el.value.trim()) {
+                    alert("Wajib terisi semua ngab! Silakan lengkapi form yang masih kosong.");
+                    el.focus();
+                    return; // Hentikan proses jika ada yang kosong
+                }
+            }
+
             document.getElementById('loader').style.display = 'flex';
             
             const thumbUrl = await upload(document.getElementById('f_thumb').files[0]) || "https://raw.githubusercontent.com/Rafkasatriya61/uploader-rafkasatriya/main/Uploads/file-1773033130873.jpeg";
@@ -530,3 +540,4 @@ fs.watchFile(file, async () => {
     </script>
 </body>
 </html>
+
